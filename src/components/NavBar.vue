@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar mb-2 shadow-lg bg-content-800 text-content-100 text-white bg-red-400">
+  <div class="navbar mb-2 shadow-lg bg-content-800 text-content-100 text-white bg-violet-700 bg-opacity-50">
     <div class="flex-1 px-2 mx-2">
       <span class="text-lg font-bold"> Login Here</span>
     </div>
@@ -39,10 +39,10 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import { isAuthenticated } from '../helpers/useAuth.js'
+import { isAuthenticated, signOut } from '../helpers/useAuth.js'
 const router = useRouter()
-const logout = () => {
-  isAuthenticated.value = false
+const logout = async () => {
+  await signOut()
   router.push('/')
 }
 </script>
