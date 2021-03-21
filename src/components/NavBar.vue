@@ -47,6 +47,8 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { isAuthenticated, signOut } from '../helpers/useAuth.js'
+import { isError } from '../helpers/useError'
+
 const router = useRouter()
 const logout = async () => {
   await signOut()
