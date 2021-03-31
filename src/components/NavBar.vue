@@ -11,6 +11,18 @@
         >
           Home
         </router-link>
+        <router-link
+          to="/charts"
+          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+        >
+          Charts
+        </router-link>
+        <router-link
+          to="/favorites"
+          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+        >
+          Favorites
+        </router-link>
         <div v-if="!isAuthenticated">
           <router-link
             to="/login"
