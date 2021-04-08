@@ -1,7 +1,7 @@
 <template>
   <div class="navbar mb-2 shadow-lg bg-content-800 text-content-100 bg-teal-800 bg-opacity-40 text-white">
     <div class="flex-1 px-2 mx-2">
-      <span class="text-lg font-bold"> LoginExample </span>
+      <span class="text-lg font-bold">Crypto Tracker</span>
     </div>
     <div class="flex-none flex px-2 mx-2">
       <div class="flex">
