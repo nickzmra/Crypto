@@ -1,6 +1,7 @@
 <template>
   <div class="navbar mb-2 shadow-lg bg-content-800 text-content-100 bg-teal-800 bg-opacity-40 text-white">
     <div class="flex-1 px-2 mx-2">
+      <akar-icons:coin  class="text-lg font-bold m-1 mx-2"/>
       <span class="text-lg font-bold">Crypto Tracker</span>
     </div>
     <div class="flex-none flex px-2 mx-2">
@@ -18,10 +19,10 @@
           Charts
         </router-link>
         <router-link
-          to="/favorites"
+          to="/news"
           class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
         >
-          Favorites
+          News
         </router-link>
         <div v-if="!isAuthenticated">
           <router-link

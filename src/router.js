@@ -6,7 +6,7 @@ import Login from "./views/Login.vue"
 import NotFound from "./views/NotFound.vue"
 import SignUp from "./views/SignUp.vue"
 import Chart from "./views/Chart.vue"
-import Favorites from "./views/Favorites.vue"
+import News from "./views/News.vue"
 
 import { isAuthenticated } from "./helpers/useAuth"
 
@@ -23,7 +23,7 @@ const routes = [
   { path: "/login", component: Login },
   { path: "/signup", component: SignUp },
   { path: "/charts", component: Chart },
-  { path: "/favorites", component: Favorites },
+  { path: "/news", component: News },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ]
 
