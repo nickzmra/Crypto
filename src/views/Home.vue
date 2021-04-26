@@ -4,7 +4,7 @@
       Welcome {{ user?.email || 'New User' }}
         </p>
         <img class="h-60 mx-auto" src="../assets/home.svg" alt="Home Image"/>
-        <p class="text-xl text-center">I would like the home page to have a standard overview of the crypto market</p>
+        <p class="text-xl text-center">Login to view content!</p>
     </div>
 </template>
 

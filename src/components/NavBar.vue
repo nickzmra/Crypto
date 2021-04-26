@@ -12,18 +12,7 @@
         >
           Home
         </router-link>
-        <router-link
-          to="/charts"
-          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-        >
-          Charts
-        </router-link>
-        <router-link
-          to="/news"
-          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-        >
-          News
-        </router-link>
+        
         <div v-if="!isAuthenticated">
           <router-link
             to="/login"
@@ -40,17 +29,29 @@
         </div>
         <div v-else>
           <router-link
-            to="/secret"
-            class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+          to="/charts"
+          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
           >
-            Secret Page
-          </router-link>
-          <button
-            class="btn btn-error btn-sm rounded-btn hover:text-content-100"
-            @click="logout"
-          >
-            Logout
-          </button>
+          Charts
+        </router-link>
+        <router-link
+          to="/news"
+          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+        >
+          News
+        </router-link>
+        <router-link
+          to="/secret"
+          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+        >
+          Other Page
+        </router-link>
+        <button
+          class="btn btn-error btn-sm rounded-btn hover:text-content-100"
+          @click="logout"
+        >
+          Logout
+        </button>
         </div>
       </div>
     </div>
