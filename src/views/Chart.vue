@@ -41,22 +41,3 @@
         }
     }
 </script>
-<!--
-    <div class="flex flex-col container mx-auto m-4 p-4">
-        <p class="text-2xl text-center bg-rose-400 p-3 mb-4 rounded">Crypto Prices</p>
-        <table class="min-w-max w-full table-auto">
-            <thead class="justify-between">
-                <tr class='bg-indigo-600'>
-                    <th class="text-2xl px-16 py-2">Cryptocurrency</th>
-                    <th class="text-2xl">Price (USD)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(value, key) in cryptos">
-                    <td class="bg-indigo-400 leading-normal text-center text-xl">{{key}}</td>
-                    <td class="bg-indigo-300 text-center text-xl">${{value.USD}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
--->
