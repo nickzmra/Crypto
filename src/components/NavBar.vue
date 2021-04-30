@@ -1,57 +1,41 @@
 <template>
-  <div class="navbar mb-2 shadow-lg bg-content-800 text-content-100 bg-teal-800 bg-opacity-40 text-white">
-    <div class="flex-1 px-2 mx-2">
-      <akar-icons:coin  class="text-lg font-bold m-1 mx-2"/>
-      <span class="text-lg font-bold">Crypto Tracker</span>
+  <div class="navbar mb-2 shadow-lg bg-content-800 text-content-100 bg-cyan-800 text-white">
+    <div class="flex-1 px-6 m-2">
+      <span
+        class="text-3xl text-transparent bg-gradient-to-l from-pink-500 via-violet-500 to-cyan-400 font-bold bg-clip-text"
+      >CryptoTracker</span>
     </div>
     <div class="flex-none flex px-2 mx-2">
       <div class="flex">
-        <router-link
-          to="/"
-          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-        >
-          Home
-        </router-link>
-        
+        <router-link to="/" class="btn btn-ghost btn-sm rounded-btn hover:text-content-100">Home</router-link>
+
         <div v-if="!isAuthenticated">
           <router-link
             to="/login"
             class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-          >
-            Login
-          </router-link>
+          >Login</router-link>
           <router-link
             to="/signup"
             class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-          >
-            SignUp
-          </router-link>
+          >SignUp</router-link>
         </div>
         <div v-else>
           <router-link
-          to="/charts"
-          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-          >
-          Charts
-        </router-link>
-        <router-link
-          to="/news"
-          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-        >
-          News
-        </router-link>
-        <router-link
-          to="/secret"
-          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-        >
-          Other Page
-        </router-link>
-        <button
-          class="btn btn-error btn-sm rounded-btn hover:text-content-100"
-          @click="logout"
-        >
-          Logout
-        </button>
+            to="/charts"
+            class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+          >Charts</router-link>
+          <router-link
+            to="/news"
+            class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+          >News</router-link>
+          <router-link
+            to="/secret"
+            class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+          >Other Page</router-link>
+          <button
+            class="btn btn-error btn-sm rounded-btn hover:text-content-100"
+            @click="logout"
+          >Logout</button>
         </div>
       </div>
     </div>
