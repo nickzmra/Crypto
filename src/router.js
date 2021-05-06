@@ -17,7 +17,7 @@ const routes = [
     component: Secret,
     beforeEnter: (to, from) => {
       if (isAuthenticated.value) return true
-      return "/login"
+      //return "/login"
     },
   },
   { path: "/login", component: Login },

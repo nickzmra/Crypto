@@ -33,7 +33,7 @@
           <router-link
             to="/secret"
             class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-          >Other Page</router-link>
+          >Data</router-link>
           <button
             class="btn btn-error btn-sm rounded-btn hover:text-content-100"
             @click="logout"

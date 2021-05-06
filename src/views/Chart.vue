@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col container mx-auto">
-        <h1 class="text-3xl text-center text-white font-bold mt-5 mb-8">Crypto Prices</h1>
+        <h1 class="text-4xl text-center text-white font-bold mt-4 mb-8">Crypto Prices</h1>
         <table class="table-auto">
             <thead>
                 <tr class="bg-green-400 bg-opacity-40">
