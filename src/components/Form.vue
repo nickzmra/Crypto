@@ -1,14 +1,13 @@
 <template>
   <section
-    class="container flex items-center justify-center text-center bg-content-800 rounded-xl mx-auto mt-24 max-w-md bg-teal-800 bg-opacity-40"
+    class="container flex items-center justify-center text-center rounded-xl mx-auto mt-24 max-w-md bg-trueGray-800 bg-opacity-80 text-white"
   >
     <form @submit.prevent class="flex flex-col w-full p-12 shadow-lg">
       <label
         v-if="form == 'signup'"
         for="name"
         class="self-start text-xs font-semibold text-content-200"
-        >Name</label
-      >
+      >Name</label>
       <input
         v-if="form == 'signup'"
         id="name"
@@ -17,11 +16,7 @@
         v-model="name"
       />
       <p class="capitalize text-sm text-red-500 text-left">{{ nameError }}</p>
-      <label
-        for="username"
-        class="self-start mt-3 text-xs font-semibold text-content-200"
-        >Email</label
-      >
+      <label for="username" class="self-start mt-3 text-sm font-semibold text-content-200">Email</label>
       <input
         id="username"
         type="text"
@@ -30,11 +25,7 @@
         autocomplete="new-password"
       />
       <p class="capitalize text-sm text-red-500 text-left">{{ errorEmail }}</p>
-      <label
-        for="password"
-        class="self-start mt-3 text-xs font-semibold text-content-200"
-        >Password</label
-      >
+      <label for="password" class="self-start mt-3 text-sm font-semibold text-content-200">Password</label>
       <input
         id="password"
         type="password"
@@ -42,16 +33,13 @@
         v-model="password"
         autocomplete="new-password"
       />
-      <p class="capitalize text-sm text-red-500 text-left">
-        {{ passwordError }}
-      </p>
+      <p class="capitalize text-sm text-red-500 text-left">{{ passwordError }}</p>
 
       <label
         v-if="form == 'signup'"
         for="passwordConfirmation"
         class="self-start mt-3 text-xs font-semibold text-content-200"
-        >Confirm Password</label
-      >
+      >Confirm Password</label>
       <input
         v-if="form == 'signup'"
         id="passwordConfirmation"
@@ -59,16 +47,14 @@
         class="flex items-center h-12 px-4 mt-2 bg-gray-200 rounded focus:outline-none focus:ring-2"
         v-model="passwordConfirmation"
       />
-      <p class="capitalize text-sm text-red-500 text-left">
-        {{ passwordConfirmationError }}
-      </p>
+      <p class="capitalize text-sm text-red-500 text-left">{{ passwordConfirmationError }}</p>
 
-      <button v-if="form == 'login'" @click="login" class="btn btn-ghost bg-blueGray-500 bg-opacity-50 mt-8">
-        Login
-      </button>
-      <button v-else @click="register" class="btn btn-ghost bg-blueGray-500 bg-opacity-50 mt-8">
-        SignUp
-      </button>
+      <button
+        v-if="form == 'login'"
+        @click="login"
+        class="btn btn-outline bg-teal-200 bg-opacity-80 mt-8 mb-4"
+      >Login</button>
+      <button v-else @click="register" class="btn btn-outline bg-green-400 mt-8 mb-4">SignUp</button>
       <button @click="google" class="btn btn-primary mt-8">
         <img class="w-8" src="../assets/google.svg" alt="Google Logo" />
       </button>

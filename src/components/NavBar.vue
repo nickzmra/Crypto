@@ -1,9 +1,11 @@
 <template>
-  <div class="navbar mb-2 shadow-lg bg-content-800 text-content-100 bg-cyan-800 text-white">
+  <div
+    class="navbar mb-2 shadow-lg bg-content-800 text-content-100 bg-trueGray-800 bg-opacity-80 text-white"
+  >
     <div class="flex-1 px-6 m-2">
       <span
-        class="text-3xl text-transparent bg-gradient-to-l from-pink-500 via-violet-500 to-cyan-400 font-bold bg-clip-text"
-      >CryptoTracker</span>
+        class="text-3xl text-transparent bg-gradient-to-l from-pink-500 via-violet-500 to-cyan-400 font-semibold bg-clip-text"
+      >crypto</span>
     </div>
     <div class="flex-none flex px-2 mx-2">
       <div class="flex">
