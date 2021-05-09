@@ -1,8 +1,6 @@
 <template>
     <div class="container mx-auto min-h-screen">
-        <h1
-            class="text-3xl text-center mt-4 mb-8 tracking-wider font-thick text-white"
-        >Top 25 Bitcoin Trading Pairs</h1>
+        <h1 class="text-4xl text-center mt-4 mb-8 font-bold text-white">Top 25 Bitcoin Trading Pairs</h1>
 
         <div class="text-xl grid grid-cols-5 text-white mb-8 bg-emerald-600 rounded-md p-4 m-3">
             <div>Previous</div>

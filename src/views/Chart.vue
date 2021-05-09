@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-4xl text-center text-white font-bold m-6 pb-4">My Favorite Coins</h1>
+    <h1 class="text-4xl text-center text-white font-bold m-6 pb-4">Favorite Coins</h1>
     <div class="container gap-2 mx-auto my-2 min-h-screen">
         <div class="text-white">
             <div
