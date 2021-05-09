@@ -9,6 +9,8 @@
             <a
               class="text-2xl font-bold hover:underline hover:text-white"
               v-bind:href="item.guid"
+              target="_blank"
+              rel="noopener noreferrer"
             >{{ item.title }}</a>
           </div>
           <div>

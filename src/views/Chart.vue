@@ -2,7 +2,9 @@
     <h1 class="text-4xl text-center text-white font-bold m-6 pb-4">My Favorite Coins</h1>
     <div class="container gap-2 mx-auto my-2 min-h-screen">
         <div class="text-white">
-            <div class="grid grid-cols-5 grid-rows-1 p-5 m-2 bg-coolGray-700 rounded-md text-2xl">
+            <div
+                class="grid grid-cols-5 grid-rows-1 p-5 m-3 bg-emerald-600 rounded-md mb-8 text-2xl"
+            >
                 <p>Coin</p>
                 <p>Price</p>
                 <p>Low (24 Hour)</p>
@@ -11,7 +13,7 @@
             </div>
             <div v-for="(value, index) in cryptos" :key="index">
                 <div
-                    class="grid grid-cols-5 grid-rows-2 bg-emerald-500 bg-opacity-50 rounded-md p-2 m-3 text-lg"
+                    class="grid grid-cols-5 grid-rows-2 bg-blueGray-500 bg-opacity-50 rounded-md p-2 m-3 text-lg"
                 >
                     <div>{{ index }}</div>
                     <div>{{ value.USD.PRICE }}</div>
