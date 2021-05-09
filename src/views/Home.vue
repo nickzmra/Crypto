@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8">
+  <div class="mt-8 min-h-screen">
     <h1
       class="text-3xl mx-auto text-center m-2 tracking-wider font-thick text-white"
     >Welcome, {{ user?.displayName || 'New User' }}!</h1>

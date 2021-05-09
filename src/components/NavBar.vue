@@ -1,5 +1,5 @@
 <template>
-  <div
+  <nav
     class="navbar mb-2 shadow-lg bg-content-800 text-content-100 bg-trueGray-800 bg-opacity-80 text-white"
   >
     <div class="flex-1 px-6 m-2">
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script setup>
@@ -55,3 +55,4 @@ const logout = async () => {
   router.push('/')
 }
 </script>
+

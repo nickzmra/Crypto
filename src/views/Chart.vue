@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col container mx-auto">
+    <div class="flex flex-col container mx-auto min-h-screen">
         <h1 class="text-4xl text-center text-white font-bold mt-4 mb-8">Crypto Prices</h1>
         <table class="table-auto">
             <thead>
@@ -51,51 +51,3 @@ export default {
     }
 }
 </script>
-
-<!--
-<template>
-    <div class="flex flex-col container mx-auto">
-        <p
-            class="text-3xl text-center font-bold bg-rose-400 p-2 mb-4 mt-8 rounded shadow-2xl"
-        >Crypto Prices</p>
-        <table class="table-auto">
-            <thead>
-                <tr class="bg-indigo-600">
-                    <th class="text-2xl">Cryptocurrency</th>
-                    <th class="text-2xl">Price (USD)</th>
-                </tr>
-            </thead>
-            <tbody class="justify-between">
-                <tr v-for="(value, key) in cryptos" class="bg-cyan-700">
-                    <td class="text-xl">{{ key }}</td>
-                    <td class="text-xl">${{ value.USD }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</template>
-
-<script>
-//import {ref} from 'vue'
-import axios from 'axios'
-
-export default {
-    name: '',
-    data: () => ({
-        cryptos: [],
-        errors: []
-    }),
-
-    created() {
-        axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,BAT,ADA,XLM,DOGE,UNI,LINK,ALGO,&tsyms=USD')
-            .then(response => {
-                this.cryptos = response.data
-                console.log(response)
-            })
-            .catch(e => {
-                this.errors.push(e)
-            })
-    }
-}
-</script>
--->
