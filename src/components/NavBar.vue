@@ -9,7 +9,7 @@
     </div>
     <div class="flex-none flex px-2 mx-2">
       <div class="flex">
-        <router-link to="/" class="btn btn-ghost btn-sm rounded-btn hover:text-content-100">Home</router-link>
+        <router-link to="/" class="btn btn-ghost btn-sm rounded-btn hover:text-content-100">Coins</router-link>
 
         <div v-if="!isAuthenticated">
           <router-link
@@ -25,7 +25,7 @@
           <router-link
             to="/charts"
             class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-          >Charts</router-link>
+          >Chart</router-link>
           <router-link
             to="/news"
             class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
@@ -33,7 +33,7 @@
           <router-link
             to="/secret"
             class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-          >Data</router-link>
+          >Pairs</router-link>
           <button
             class="btn btn-error btn-sm rounded-btn hover:text-content-100"
             @click="logout"

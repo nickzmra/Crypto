@@ -1,14 +1,29 @@
 <template>
-    <div class="container flex flex-col mx-auto min-h-screen">
-        <p
-            class="text-3xl mx-auto text-center m-6 tracking-wider font-thick text-white"
-        >More Coin Data</p>
-        <p class="text-white text-center items-justify">Vol:</p>
+    <div class="container mx-auto min-h-screen">
+        <h1
+            class="text-3xl text-center mt-4 mb-8 tracking-wider font-thick text-white"
+        >Top 25 Bitcoin Trading Pairs</h1>
+
+        <div class="text-xl grid grid-cols-5 text-white mb-8 bg-blueGray-600 rounded-md p-4">
+            <div>Previous</div>
+            <div>
+                <ic:round-arrow-right-alt />
+            </div>
+            <div>Current</div>
+            <div>Volume (24 Hour)</div>
+            <div>Price</div>
+        </div>
         <div v-for="(coin, index) in coins" :key="index">
-            <div class="container flex flex-col justify-between mx-auto text-white">
-                <p
-                    class="text-justify m-2 rounded-md bg-coolGray-600 p-4"
-                >{{ coin.cccagg_volume_base }} {{ coin.time }}</p>
+            <div
+                class="grid grid-cols-5 grid-rows-2 text-white bg-emerald-500 bg-opacity-50 rounded-lg p-3 m-4"
+            >
+                <div>{{ coin.fromSymbol }}</div>
+                <div>
+                    <ic:round-arrow-right-alt />
+                </div>
+                <div>{{ coin.toSymbol }}</div>
+                <div>{{ Math.round(coin.volume24hTo) }}</div>
+                <div>${{ coin.price }}</div>
             </div>
         </div>
     </div>
@@ -24,7 +39,7 @@ export default {
         errors: []
     }),
     created() {
-        axios.get('https://min-api.cryptocompare.com/data/symbol/histohour?fsym=BTC&tsym=USD&limit=10')
+        axios.get('https://min-api.cryptocompare.com/data/top/pairs?fsym=BTC&limit=15')
             .then(response => {
                 this.coins = response.data.Data
                 console.log(response.data.Message)

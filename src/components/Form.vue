@@ -60,6 +60,7 @@
       </button>
     </form>
   </section>
+  <div class="min-h-screen"></div>
 </template>
 
 <script setup>
