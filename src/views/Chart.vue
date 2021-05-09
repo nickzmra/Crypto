@@ -1,30 +1,26 @@
 <template>
-    <div class="flex flex-col container mx-auto min-h-screen">
-        <h1 class="text-4xl text-center text-white font-bold mt-4 mb-8">Crypto Prices</h1>
-        <table class="table-auto">
-            <thead>
-                <tr class="bg-green-400 bg-opacity-40">
-                    <th class="text-lg p-4">Coin</th>
-                    <th class="text-lg">Price (USD)</th>
-                    <th class="text-lg">Market Cap</th>
-                    <th class="text-lg">High (24 Hour)</th>
-                    <th class="text-lg">Low (24 Hour)</th>
-                </tr>
-            </thead>
-            <tbody
-                class="bg-blueGray-400 bg-opacity-60"
-                v-for="(value, index) in cryptos"
-                :key="index"
-            >
-                <tr>
-                    <td class="text-2xl p-3 m-2">{{ value.USD.FROMSYMBOL }}</td>
-                    <td class="text-2xl">{{ value.USD.PRICE }}</td>
-                    <td class="text-2xl">{{ value.USD.MKTCAP }}</td>
-                    <td class="text-2xl">{{ value.USD.HIGH24HOUR }}</td>
-                    <td class="text-2xl">{{ value.USD.LOW24HOUR }}</td>
-                </tr>
-            </tbody>
-        </table>
+    <h1 class="text-4xl text-center text-white font-bold m-6 pb-4">My Favorite Coins</h1>
+    <div class="container gap-2 mx-auto my-2 min-h-screen">
+        <div class="text-white">
+            <div class="grid grid-cols-5 grid-rows-1 p-5 m-2 bg-coolGray-700 rounded-md text-2xl">
+                <p>Coin</p>
+                <p>Price</p>
+                <p>Low (24 Hour)</p>
+                <p>High (24 Hour)</p>
+                <p>Market Cap</p>
+            </div>
+            <div v-for="(value, index) in cryptos" :key="index">
+                <div
+                    class="grid grid-cols-5 grid-rows-2 bg-emerald-500 bg-opacity-50 rounded-md p-2 m-3 text-lg"
+                >
+                    <div>{{ index }}</div>
+                    <div>{{ value.USD.PRICE }}</div>
+                    <div>{{ value.USD.LOW24HOUR }}</div>
+                    <div>{{ value.USD.HIGH24HOUR }}</div>
+                    <div>{{ value.USD.MKTCAP }}</div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -40,7 +36,7 @@ export default {
     }),
 
     created() {
-        axios.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,LTC,BAT,ADA,XLM,DOGE,UNI,LINK,ALGO,&tsyms=USD,EUR')
+        axios.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,LTC,BAT,ADA,XLM,DOGE,ETC,UNI,LINK,ALGO,&tsyms=USD,EUR')
             .then(response => {
                 this.cryptos = response.data.DISPLAY
                 console.log(response.Data.Message)
